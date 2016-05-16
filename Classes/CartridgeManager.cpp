@@ -59,7 +59,15 @@ void CartridgeManager::update(float dt) {
 								plane->getPositionY() + plane->getContentSize().height / 2 - 25));
 						}
 						//积分更新
-						m_player->setGrade(m_player->getGrade() + plane->getGrade() * m_player->getCarom() * m_player->getGradeTimes());
+						int scoreToPlus = plane->getGrade() * m_player->getCarom() * m_player->getGradeTimes();
+						loadText("Carom X" + Value(m_player->getCarom()).asString() + ", +" + Value(scoreToPlus).asString(), 0.4f);
+						m_player->setGrade(m_player->getGrade() + scoreToPlus);
+						if (!(m_player->isNewRecord) && m_player->getGrade() > m_player->m_record) {
+							m_player->isNewRecord = true;
+							m_player->t_highestScore->setText("NEW RECORD");
+							m_player->t_highestScore->setTextColor(ccc4(0, 255, 0, 255));
+							m_player->t_grade->setTextColor(ccc4(0, 255, 0, 255));
+						}
 						m_player->t_grade->setText((Value(m_player->getGrade()).asString()));
 
 						m_planeManager->m_planeVec.eraseObject(plane);
@@ -106,4 +114,16 @@ void CartridgeManager::hitSucceed() {
 	else {
 	m_player->t_scene->setText(Value("Carom X").asString() + Value(m_player->getCarom()).asString());
 	}
+}
+
+void CartridgeManager::loadText(std::string text, float dt) {
+	Text* txt = Text::create(text, "arial", 25);
+	txt->setTextHorizontalAlignment(TextHAlignment::CENTER);
+	txt->setPosition(Point(480, 550));
+	this->addChild(txt, 6);
+	auto fadeout = FadeOut::create(dt);
+	auto moveby = MoveBy::create(dt, Point(0, 30));
+	txt->runAction(Sequence::create(Spawn::create(
+		fadeout, moveby, NULL), CallFunc::create(CC_CALLBACK_0(Sprite::removeFromParent, txt)), NULL));
+	//txt->runAction(actions);
 }

@@ -32,6 +32,7 @@ private:
 	Player* m_player;
 	void hitMissed();
 	void hitSucceed();
+	void loadText(std::string text, float dt);
 	//TollgateScene* m_backScene;
 };
 

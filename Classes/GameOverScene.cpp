@@ -6,18 +6,16 @@
 
 //using namespace cocostudio::timeline;
 
-Scene* GameOver::createScene(int score)
+Scene* GameOver::createScene(int score, int record)
 {
     // 'scene' is an autorelease object
     auto scene = Scene::create();
     // 'layer' is an autorelease object
     auto layer = GameOver::create();
 	layer->m_score = score;
+	layer->m_record = record;
     // add layer as a child to scene
     scene->addChild(layer);
-	//log("Here is you");
-	//log("%d", layer->m_score);
-	//log("Here is you");
 	layer->loadScore();
     // return the scene
     return scene;
@@ -40,9 +38,11 @@ bool GameOver::init()
 
 void GameOver::update(float delta) {
 	if (KEY_DOWN(VK_SPACE)) {
-		auto scene = TollgateScene::createScene();
+		log("new Game is going to create.");
+		auto scene = TollgateScene::createScene(m_record);
 		// run
 		Director::getInstance()->replaceScene(TransitionSlideInL::create(1.0f, scene));
+		this->unscheduleUpdate();
 	}
 }
 
@@ -51,6 +51,8 @@ void GameOver::loadScore() {
 	addChild(rootNode);
 	auto scorelabel = (Text*)rootNode->getChildByName("Score");
 	scorelabel->setText(Value(m_score).asString());
+	auto recordlabel = (Text*)rootNode->getChildByName("ScoreH");
+	recordlabel->setText(Value(m_record).asString());
 	auto btn = (Button*)rootNode->getChildByName("btnReplay");
 	btn->addTouchEventListener(this, toucheventselector(GameOver::replay));
 }
@@ -58,8 +60,11 @@ void GameOver::loadScore() {
 void GameOver::replay(Ref*, TouchEventType type) {
 	switch (type) {
 	case TouchEventType::TOUCH_EVENT_ENDED:
-		auto scene = TollgateScene::createScene();
+		log("new Game is going to create.");
+		auto scene = TollgateScene::createScene(m_record);
+		log("going to create.");
 		Director::getInstance()->replaceScene(TransitionSlideInL::create(1.0f, scene));
+		log("gameover create end");
 		break;
 	}
 }

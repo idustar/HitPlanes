@@ -40,7 +40,8 @@ bool HelloWorld::init()
 
 void HelloWorld::update(float delta) {
 	if (KEY_DOWN(VK_SPACE)) {	//处理空格事件
-		auto scene = TollgateScene::createScene();
+		auto scene = TollgateScene::createScene(0);
 		Director::getInstance()->replaceScene(TransitionSlideInL::create(1.0f, scene));
+		this->unscheduleUpdate();
 	}
 }

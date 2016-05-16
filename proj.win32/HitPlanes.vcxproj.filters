@@ -31,6 +31,9 @@
     <Filter Include="src\Entity\Prop">
       <UniqueIdentifier>{e611b00f-546e-4fa1-8032-a50d68d7fc23}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\JSON">
+      <UniqueIdentifier>{438bac0c-e4e7-4c96-9e68-f11ec48c6349}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -98,6 +101,15 @@
     </ClCompile>
     <ClCompile Include="..\Classes\Protect.cpp">
       <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\json\json_reader.cpp">
+      <Filter>src\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\json\json_value.cpp">
+      <Filter>src\JSON</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\json\json_writer.cpp">
+      <Filter>src\JSON</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -167,10 +179,48 @@
     <ClInclude Include="..\Classes\Protect.h">
       <Filter>src\Entity\Prop</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\json\autolink.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\config.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\features.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\forwards.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\json.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\json_batchallocator.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\reader.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\value.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\json\writer.h">
+      <Filter>src\JSON</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
       <Filter>resource</Filter>
     </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\json\json_internalarray.inl">
+      <Filter>src\JSON</Filter>
+    </None>
+    <None Include="..\Classes\json\json_internalmap.inl">
+      <Filter>src\JSON</Filter>
+    </None>
+    <None Include="..\Classes\json\json_valueiterator.inl">
+      <Filter>src\JSON</Filter>
+    </None>
   </ItemGroup>
 </Project>

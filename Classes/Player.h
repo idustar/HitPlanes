@@ -27,6 +27,9 @@ public:
 	Text* t_carom;
 	Text* t_scene;
 	Text* t_grade;
+	Text* t_highestScore;
+	int m_record;
+	bool isNewRecord = false;
 	LoadingBar* m_gradeBar;
 	int getCarom();
 	void setCarom(int carom);

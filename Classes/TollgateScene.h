@@ -25,7 +25,7 @@ using namespace cocos2d;
 class Player;
 class TollgateScene : public Layer {
 public:
-    static Scene* createScene();
+    static Scene* createScene(int tempRecord);
 	virtual bool init();
 	CREATE_FUNC(TollgateScene);
 
@@ -40,13 +40,19 @@ private:
 	PlaneManager* m_planeManager;
 	PropManager* m_propManager;
 	Vector<Sprite*> m_props;	//道具提示
+	Vector<LoadingBar *> m_propBars;
+	int m_propOddTime[4]{ 0,0,0,0 };
 	int oddTime;	//剩余时间
 	int originTime;	//总共时间
+	void readJson();
+	void setJson();
+	int tempRecord;
 	void loadCallFromPlayer();
 	void TimeStopReload(float dt);
 	void Mul2Reload(float dt);
 	void RushReload(float dt);
 	void ProtectReload(float dt);
+	void loadText(std::string text, float dt);
 };
 
 #endif

@@ -16,14 +16,15 @@
             <PreSize X="1.0000" Y="1.0000" />
             <FileData Type="Normal" Path="helloworldBG.jpg" Plist="" />
           </AbstractNodeData>
-          <AbstractNodeData Name="Text_1" ActionTag="1278656659" Tag="5" IconVisible="False" LeftMargin="287.7202" RightMargin="276.2798" TopMargin="550.6623" BottomMargin="65.3377" FontSize="24" LabelText="Press [Space] to start a new game" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ShadowEnabled="True" ctype="TextObjectData">
-            <Size X="396.0000" Y="24.0000" />
+          <AbstractNodeData Name="Text_1" ActionTag="1278656659" Tag="5" IconVisible="False" LeftMargin="300.2202" RightMargin="288.7798" TopMargin="548.6623" BottomMargin="63.3377" FontSize="24" LabelText="Press [Space] to start a new game" HorizontalAlignmentType="HT_Center" ShadowOffsetX="2.0000" ShadowOffsetY="-2.0000" ShadowEnabled="True" ctype="TextObjectData">
+            <Size X="371.0000" Y="28.0000" />
             <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <Position X="485.7202" Y="77.3377" />
             <Scale ScaleX="1.5416" ScaleY="1.5416" />
             <CColor A="255" R="255" G="255" B="255" />
             <PrePosition X="0.5060" Y="0.1208" />
-            <PreSize X="0.4125" Y="0.0375" />
+            <PreSize X="0.3865" Y="0.0437" />
+            <FontResource Type="Normal" Path="arial.ttf" Plist="" />
             <OutlineColor A="255" R="255" G="0" B="0" />
             <ShadowColor A="255" R="110" G="110" B="110" />
           </AbstractNodeData>

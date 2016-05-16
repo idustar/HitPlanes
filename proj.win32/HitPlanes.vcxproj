@@ -71,7 +71,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\audio\include;$(COCOS_X_ROOT)\cocos2d-x-3.10\external;$(COCOS_X_ROOT)\cocos2d-x-3.10\external\chipmunk\include\chipmunk;$(COCOS_X_ROOT)\cocos2d-x-3.10\extensions;..\Classes;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\Classes;$(COCOS_X_ROOT)\cocos2d-x-3.10\cocos\audio\include;$(COCOS_X_ROOT)\cocos2d-x-3.10\external;$(COCOS_X_ROOT)\cocos2d-x-3.10\external\chipmunk\include\chipmunk;$(COCOS_X_ROOT)\cocos2d-x-3.10\extensions;..;%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -157,6 +157,9 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\GameOverScene.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\EnemyPlane.cpp" />
+    <ClCompile Include="..\Classes\json\json_reader.cpp" />
+    <ClCompile Include="..\Classes\json\json_value.cpp" />
+    <ClCompile Include="..\Classes\json\json_writer.cpp" />
     <ClCompile Include="..\Classes\mul2.cpp" />
     <ClCompile Include="..\Classes\PlaneManager.cpp" />
     <ClCompile Include="..\Classes\Player.cpp" />
@@ -181,6 +184,15 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\GameOverScene.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\EnemyPlane.h" />
+    <ClInclude Include="..\Classes\json\autolink.h" />
+    <ClInclude Include="..\Classes\json\config.h" />
+    <ClInclude Include="..\Classes\json\features.h" />
+    <ClInclude Include="..\Classes\json\forwards.h" />
+    <ClInclude Include="..\Classes\json\json.h" />
+    <ClInclude Include="..\Classes\json\json_batchallocator.h" />
+    <ClInclude Include="..\Classes\json\reader.h" />
+    <ClInclude Include="..\Classes\json\value.h" />
+    <ClInclude Include="..\Classes\json\writer.h" />
     <ClInclude Include="..\Classes\mul2.h" />
     <ClInclude Include="..\Classes\PlaneManager.h" />
     <ClInclude Include="..\Classes\Player.h" />
@@ -195,6 +207,11 @@ xcopy /Y /Q "$(COCOS_X_ROOT)\cocos2d-x-3.10\prebuilt\win32\*.*" "$(OutDir)"
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\json\json_internalarray.inl" />
+    <None Include="..\Classes\json\json_internalmap.inl" />
+    <None Include="..\Classes\json\json_valueiterator.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

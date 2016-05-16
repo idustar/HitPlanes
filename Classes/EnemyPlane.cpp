@@ -59,13 +59,13 @@ int EnemyPlane::hit(int HPMinus) {
 	if (m_HP > 0) {
 		m_HP = m_HP - HPMinus;
 		if (m_HP <= 0) {
+			/* »÷Âä¶¯»­ */
 			auto fadeout = FadeOut::create(0.4f);
 			auto rotate= RotateTo::create(0.4f, 180, 20);
             auto endAction = [&]() {
 				hide();
 				setVisible(false);
-			};
-			/* »÷Âä¶¯»­ */
+			};		
 			CallFunc *endAct = CallFunc::create(endAction);
 			Action* actions = Sequence::create(Spawn::create( 
 				fadeout, rotate, NULL), endAct, NULL);
