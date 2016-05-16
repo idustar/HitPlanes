@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity">
+      <UniqueIdentifier>{7d514444-2d68-4083-bfbb-f90f0a1dc809}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\TollgateScene">
+      <UniqueIdentifier>{61cd2b8d-a333-47a1-a49b-5a457a05be22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Player">
+      <UniqueIdentifier>{f96977ed-36d9-4e56-aa3d-17c1e4138a80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Cartridge">
+      <UniqueIdentifier>{328e96fe-6a4e-4017-9d29-d9fd6a38b8b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Plane">
+      <UniqueIdentifier>{a739b893-7592-4d96-8a8f-39c646dd733f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\CSVLoader">
+      <UniqueIdentifier>{5aabd805-c03f-4eb4-b770-83ac3b1ee97e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Entity\Prop">
+      <UniqueIdentifier>{e611b00f-546e-4fa1-8032-a50d68d7fc23}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Entity.cpp">
+      <Filter>src\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Player.cpp">
+      <Filter>src\Entity\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TollgateScene.cpp">
+      <Filter>src\TollgateScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Cartridge.cpp">
+      <Filter>src\Entity\Cartridge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CartridgeManager.cpp">
+      <Filter>src\Entity\Cartridge</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PlaneManager.cpp">
+      <Filter>src\Entity\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EnemyPlane.cpp">
+      <Filter>src\Entity\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\GameOverScene.cpp">
+      <Filter>src\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CsvData.cpp">
+      <Filter>src\CSVLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CsvUtil.cpp">
+      <Filter>src\CSVLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StringUtil.cpp">
+      <Filter>src\CSVLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Prop.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\PropManager.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Clock.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TimeStop.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\mul2.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Rush.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Bomb.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Protect.cpp">
+      <Filter>src\Entity\Prop</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Entity.h">
+      <Filter>src\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Player.h">
+      <Filter>src\Entity\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TollgateScene.h">
+      <Filter>src\TollgateScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Cartridge.h">
+      <Filter>src\Entity\Cartridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CartridgeManager.h">
+      <Filter>src\Entity\Cartridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PlaneManager.h">
+      <Filter>src\Entity\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EnemyPlane.h">
+      <Filter>src\Entity\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameOverScene.h">
+      <Filter>src\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CsvData.h">
+      <Filter>src\CSVLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CsvUtil.h">
+      <Filter>src\CSVLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StringUtil.h">
+      <Filter>src\CSVLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Prop.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\PropManager.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Clock.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TimeStop.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\mul2.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Rush.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Bomb.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Protect.h">
+      <Filter>src\Entity\Prop</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+ID,LEFTPATH,RIGHTPATH,HP,SpeedL,SpeedR,Rate,WeightL,WeightB,PropRate
+1,plane_1_left.png,plane_1_right.png,1,4,3,0.45,30,20,0.6
+2,plane_2_left.png,plane_2_right.png,5,3,3,0.47,100,200,0.6
+3,plane_3_left.png,plane_3_right.png,1,5,4,0.65,50,50,0.6
+4,plane_4_left.png,plane_4_right.png,1,6,5,0.75,100,50,0.6
+5,plane_5_left.png,plane_5_right.png,2,5,4,0.8,50,250,0.6
+6,plane_6_left.png,plane_6_right.png,1,3,2,0.85,300,300,0.6
+7,plane_7_left.png,plane_7_right.png,1,20,10,0.9,30,70,0.6
+8,plane_8_left.png,plane_8_right.png,1,4,3,0.95,100,100,1
+9,plane_9_left.png,plane_9_right.png,1,4,3,1,100,100,1
